@@ -1,38 +1,54 @@
-/* Global Styles */
-* {
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fc;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f7fc;
+
+.navbar {
+  background-color: #4CAF50;
+  padding: 10px 20px;
+  text-align: center;
 }
 
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+.navbar button {
+  background-color: #fff;
+  color: #4CAF50;
+  border: 2px solid #4CAF50;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.navbar button:hover {
+  background-color: #4CAF50;
+  color: #fff;
 }
 
 .form-container {
-  background-color: white;
-  padding: 40px;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
   border-radius: 8px;
-  width: 100%;
-  max-width: 700px;
-  border-top: 4px solid #007bff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   text-align: center;
-  font-size: 28px;
   color: #333;
-  margin-bottom: 20px;
 }
+
+h2 {
+  margin-top: 0;
+  color: #333;
+}
+
 
 .form {
   display: flex;
@@ -43,36 +59,24 @@ h1 {
   margin-bottom: 15px;
 }
 
-label {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #444;
-  margin-bottom: 8px;
+.form-group label {
+  font-size: 14px;
+  color: #555;
 }
 
-input,
-textarea,
-select {
+.form-group input,
+.form-group textarea,
+.form-group select {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background-color: #fafafa;
-  font-size: 1rem;
-  color: #333;
-  transition: border 0.3s ease-in-out;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
 }
 
-input:focus,
-textarea:focus,
-select:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-textarea {
-  resize: vertical;
-  min-height: 120px;
+.form-group textarea {
+  min-height: 100px;
 }
 
 .radio-buttons {
@@ -81,71 +85,211 @@ textarea {
 }
 
 .radio-label {
-  font-size: 1rem;
-  display: inline-block;
-}
-
-.submit-btn {
-  background-color: #007bff;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
-}
-
-.submit-btn:hover {
-  background-color: #0056b3;
+  font-size: 14px;
 }
 
 .terms-group {
   display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  font-size: 1rem;
-}
-
-.terms-label {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+  align-items: center; 
+  margin-bottom: 15px;
 }
 
 .terms-checkbox {
-  margin-right: 10px; /* Adds space between checkbox and text */
-  width: 18px; /* Adjust the size of the checkbox */
-  height: 18px;
-  transition: transform 0.2s ease; /* Smooth effect when clicked */
+  margin-right: 10px; 
 }
 
-.terms-checkbox:checked {
-  transform: scale(1.2); /* Slightly increase size on check */
+.terms-label {
+  font-size: 14px;
 }
 
-.terms-label:hover .terms-checkbox {
-  background-color: #e3e3e3; /* Light color when hovering */
+.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  align-self: center; 
 }
 
-.terms-group label {
-  color: #444;
+.submit-btn:hover {
+  background-color: #45a049;
 }
 
-.terms-group label:hover {
-  color: #007bff; /* Change text color when hovering over label */
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.form-row {
+ul li {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul li p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+ul li button {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+ul li button:hover {
+  background-color: #d32f2f;
+}
+
+ul li button:last-child {
+  background-color: #4CAF50;
+}
+
+ul li button:last-child:hover {
+  background-color: #388e3c;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    padding: 15px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.terms-group {
   display: flex;
-  gap: 20px;
+  align-items: center; 
+  margin-bottom: 15px;
 }
 
-.form-group select {
-  padding: 12px;
+.terms-checkbox {
+  margin-right: 10px;
 }
 
-.form-group select:focus {
-  border-color: #007bff;
+.terms-label {
+  font-size: 14px; 
+  line-height: 20px; 
 }
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.terms-group {
+  display: flex;
+  align-items: center;  
+  margin-bottom: 15px;
+}
+
+.terms-checkbox {
+  margin-right: 10px;  
+  width: auto;  
+  height: auto; 
+}
+
+.terms-label {
+  font-size: 14px; 
+  margin: 0;
+}
+
+.terms-group {
+  display: flex;
+  align-items: center;  
+  margin-bottom: 15px;   
+}
+
+.terms-checkbox {
+  margin-right: 10px;  
+}
+
+.terms-label {
+  font-size: 14px;  
+  margin: 0; 
+}
+
+.terms-group {
+  display: flex;
+  align-items: center;  
+  margin-bottom: 15px;   
+}
+
+.terms-checkbox {
+  margin-right: 10px;  
+}
+
+.terms-label {
+  font-size: 14px;  
+  margin: 0; 
+}
+
+
+.terms-group {
+  display: flex;             
+  align-items: center;        
+  margin-bottom: 15px;        
+}
+
+.terms-checkbox {
+  margin-right: 10px;          
+  width: 20px;               
+  height: 20px;                
+}
+
+.terms-label {
+  font-size: 14px;           
+  margin: 0;                
+  line-height: 20px;           
+  display: inline-block;       
+  white-space: nowrap;         
+}
+
+.terms-group {
+  display: flex;                
+  align-items: center;       
+  margin-bottom: 15px;         
+  margin-left: 0;              
+  padding-left: 0;             
+  width: 100%;                 
+}
+
+.terms-checkbox {
+  margin-right: 10px;        
+  width: 20px;                 
+  height: 20px;                
+}
+
+.terms-label {
+  font-size: 14px;              
+  margin: 0;                  
+  line-height: 20px;          
+  display: inline-block;        
+  white-space: nowrap;          
+}
+
+
+
